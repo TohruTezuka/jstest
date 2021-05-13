@@ -1,0 +1,36 @@
+<style>.product{width: 50px}</style>
+
+<select id="print">
+	<option value="omikuji">おみくじ</option>
+	<option value="hanahuda">花札</option>
+	<option value="majanpai">麻雀牌</option>
+</select>
+<input type="button" value="textを取得" id="get_text">
+
+<br>
+
+<div id="img_wrap">
+  
+  <!-- ここに画像が埋め込まれる -->
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+  
+//最初に開かれたときに"おみくじ"が選ばれてるのでその処理だけ
+  var elem = '';//連結のため空文字で初期化
+  for( let i=0 ; i < 7 ; i++ ){
+    elem += '<img class="product" src="' + i + '.png">' ;
+  }
+
+  $('#img_wrap').html(elem);
+  console.log(elem);
+  // console.log(elem);
+
+  $("#get_text").on("click", function () {
+var ret = $("#print option:selected").text();
+alert(ret);
+console.log(ret);
+});
+</script>
+

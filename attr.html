@@ -1,0 +1,27 @@
+<!-- 04_js\renshu\attr.html -->
+
+<select id="blson">
+	<option>おもて</option>
+	<option>うら</option>
+</select>
+<br>
+<img class="product" src="e5b6394bbd7c.jpg">
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+// HTML 文書の読み込みと解析が完了したとき	
+	$("#blson").on("change", function () {
+		 $(".product").attr('src','e5b6392319a0.jpg');
+	});
+});
+
+exit;
+
+
+$("#ninja").mouseenter(function () {
+$(this).attr("src", "e5b6394bbd7c.jpg");//前
+}).mouseleave(function () {
+$(this).attr("src", "e5b6392319a0.jpg");//背中
+});
+</script>

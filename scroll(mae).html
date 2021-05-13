@@ -1,0 +1,33 @@
+<style >#an{display: flex;}#an a{display: block; margin: 10px; border: solid 1px #ccc; padding: .5em 1em;}
+</style>
+<nav id="an"></nav>
+
+<div id="img_wrap">
+  <!-- ここに画像が埋め込まれる -->
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+	prt();
+
+ function prt(){
+    var elem = '';
+    
+    var nav = '';
+
+    
+    for( let i=0 ; i < 7 ; i++ ){
+      elem += `<div class="row">
+      	<h2 id="kuji-${i}"> ${i}</h2>
+      	<img class="product" src="images/${i}.png">
+      </div>` ;
+
+      nav += `<a href="kuji-${i}">${i}</a>`;
+    }
+    $('#img_wrap').html(elem);
+    $('#an').html(nav);
+
+    $('.product').css('width','200px');
+  }
+
+  </script>

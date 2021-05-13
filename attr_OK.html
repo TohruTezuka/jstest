@@ -1,0 +1,25 @@
+<form>
+  <select id="myselect" >
+  <option value="">下から選択して下さい</option>
+  <option value="taro">太郎</option>
+  <option value="jiro">次郎</option>
+  <option value="hanako">花子</option>
+  </select>
+  <input type="button" value="textを取得" id="get_text">
+  </form>
+  
+  
+  // 選択しているセレクトボックスのテキストを取得（おまけ）
+  $("#get_text").on("click", function () {
+  var ret = $("#myselect option:selected").text();
+  alert(re);
+  });
+  
+  
+  
+  <input type="button" value="valueを取得" id="get_val">
+  // 選択しているセレクトボックスの値を取得
+  $("#get_val").on("click", function () {
+  var ret = $("#myselect").val();
+  alert(ret);
+  });
